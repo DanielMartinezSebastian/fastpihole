@@ -1,5 +1,7 @@
 # fastPiHole
 
+![fastPiHole demo](docs/demo.gif)
+
 Local dashboard to control Pi-hole: global on/off filtering, per-device
 DNS blocking, and real-time stats. React + Vite + Tailwind + shadcn/ui
 on the frontend, Express as an authenticated backend/proxy to the
