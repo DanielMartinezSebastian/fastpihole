@@ -41,7 +41,7 @@ export default function Dashboard({ onLogout, onOpenSettings, pihole }) {
   const isEnabled = status === 'enabled'
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex min-h-dvh flex-col bg-background">
       <Header isLoading={isLoading} isEnabled={isEnabled} onOpenSettings={onOpenSettings} onLogout={onLogout} />
 
       <Dialog open={showTokenNag} onOpenChange={setShowTokenNag}>
@@ -68,10 +68,10 @@ export default function Dashboard({ onLogout, onOpenSettings, pihole }) {
       </Dialog>
 
       {/* Main - Monochrome */}
-      <main className="max-w-6xl px-4 py-8 mx-auto sm:px-6">
+      <main className="w-full flex-1 max-w-6xl px-4 py-4 mx-auto sm:px-6 sm:py-6 lg:py-8">
 
         {/* Grid: Stats (left on desktop) + Control (right on desktop) */}
-        <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-3 lg:gap-6 lg:mb-6">
           <Card className="order-2 border lg:order-1 border-border">
             <CardContent className="grid grid-cols-3 gap-4 pt-6 text-center sm:grid-cols-6 lg:grid-cols-2 lg:text-left">
               <div>
@@ -102,7 +102,7 @@ export default function Dashboard({ onLogout, onOpenSettings, pihole }) {
           </Card>
 
           <Card className="order-1 border lg:col-span-2 lg:order-2 border-border">
-            <CardContent className="flex justify-center pt-8 pb-8">
+            <CardContent className="flex justify-center pt-6 pb-6 lg:pt-8 lg:pb-8">
               <button
                 onClick={isEnabled ? disableBlocking : enableBlocking}
                 disabled={isLoading}

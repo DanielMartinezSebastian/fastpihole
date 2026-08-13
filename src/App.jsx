@@ -18,7 +18,7 @@ export default function App() {
   let content
   if (isLoading) {
     content = (
-      <div className="flex items-center justify-center min-h-screen bg-background">
+      <div className="flex items-center justify-center min-h-dvh bg-background">
         <div className="text-center">
           <div className="h-12 w-12 animate-spin rounded-full border-4 border-muted border-t-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground">{t('common.checkingAuth')}</p>

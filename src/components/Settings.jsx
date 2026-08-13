@@ -93,10 +93,10 @@ export default function Settings({ onBack, onLogout, pihole }) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <Header isLoading={pihole.isLoading} isEnabled={isEnabled} onBack={onBack} onGoHome={onBack} onLogout={onLogout} />
 
-      <main className="max-w-2xl px-4 py-8 mx-auto sm:px-6 space-y-6">
+      <main className="max-w-2xl px-4 py-4 mx-auto sm:px-6 sm:py-6 lg:py-8 space-y-4 sm:space-y-6">
         {isLoading ? (
           <p className="py-6 text-sm text-center text-muted-foreground">{t('common.loading')}</p>
         ) : (

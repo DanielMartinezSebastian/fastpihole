@@ -27,7 +27,7 @@ function HomeLink({ onGoHome, className, children }) {
 export default function Header({ isLoading, isEnabled, onBack, onOpenSettings, onGoHome, onLogout }) {
   const { t } = useTranslation()
   return (
-    <header className="sticky top-0 z-40">
+    <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="flex items-center justify-between max-w-6xl px-4 py-3 mx-auto sm:px-6">
         <div className="flex items-center gap-2">
           {onBack && (

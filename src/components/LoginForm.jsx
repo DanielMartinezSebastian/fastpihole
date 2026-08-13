@@ -23,7 +23,7 @@ export default function LoginForm({ login }) {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4 bg-background">
+    <div className="flex items-center justify-center min-h-dvh p-4 bg-background">
       <Card className="w-full max-w-sm border border-border">
         <CardHeader className="space-y-0 border-border">
           <div className="flex justify-center -mb-2">
