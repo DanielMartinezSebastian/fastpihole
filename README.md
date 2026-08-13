@@ -80,7 +80,7 @@ npm run server:watch   # Express at http://localhost:20053, in another terminal
 ```
 
 The Vite dev server proxies `/api` to the backend by reading
-`DASHBOARD_PORT` from `.env` (falling back to `3000` if unset) —
+`DASHBOARD_PORT` from `.env` (falling back to `20053` if unset) —
 there's no hardcoded port in `vite.config.js`.
 
 ## Configuration
@@ -385,10 +385,10 @@ restarts `node server.js` if it doesn't respond — if you never ran a
 manual `npm run build` at least once, the watchdog will keep
 restarting the process forever, serving this same error.
 
-**The dashboard starts on port 3000 instead of my `DASHBOARD_PORT`**
+**The dashboard starts on port 20053 instead of my custom `DASHBOARD_PORT`**
 There's no `.env` in the project directory (or it got deleted/renamed
 at some point) — without it, `DASHBOARD_PORT` isn't read and it falls
-back to the default (`3000`). Check with `ls -la .env` and, if it's
+back to the default (`20053`). Check with `ls -la .env` and, if it's
 missing, `cp .env.example .env` (already has `DASHBOARD_PORT=20053`)
 or restore your copy if you saved a backup (`.env.bak`).
 
