@@ -1,6 +1,6 @@
 # fastPiHole
 
-![fastPiHole demo](docs/demo.gif)
+![fastPiHole demo](docs/demo.gif?v=2)
 
 Local dashboard to control Pi-hole: global on/off filtering, per-device
 DNS blocking, and real-time stats. React + Vite + Tailwind + shadcn/ui
