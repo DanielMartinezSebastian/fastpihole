@@ -46,8 +46,8 @@ Pi-hole v6 API.
 ## First install
 
 ```bash
-git clone <repo>
-cd pi-hole-fast-dashboard
+git clone https://github.com/DanielMartinezSebastian/fastpihole.git
+cd fastpihole
 npm install
 cp .env.example .env
 npm run build

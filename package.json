@@ -1,5 +1,5 @@
 {
-  "name": "pi-hole-fast-dashboard",
+  "name": "fastpihole",
   "version": "3.0.0",
   "description": "Modern Pi-hole Dashboard with React + shadcn/ui + Tailwind",
   "main": "server.js",

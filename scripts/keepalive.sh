@@ -3,7 +3,7 @@
 # Watchdog for fastPiHole. Checks that the dashboard answers HTTP requests
 # and (re)starts it if it doesn't. Meant to run from cron every minute:
 #
-#   * * * * * /path/to/pi-hole-fast-dashboard/scripts/keepalive.sh
+#   * * * * * /path/to/fastpihole/scripts/keepalive.sh
 #
 # Safe to run manually too. Uses flock so overlapping cron ticks don't
 # start duplicate instances if a restart is still in progress.
