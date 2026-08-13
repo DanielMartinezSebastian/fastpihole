@@ -217,7 +217,7 @@ fi
 SERVE_ALL="$(pihole-FTL --config webserver.serve_all 2>/dev/null | tail -1 | tr -d '"' | tr '[:upper:]' '[:lower:]')"
 
 DASHBOARD_PORT="$(grep -E '^DASHBOARD_PORT=' "$PROJECT_DIR/.env" 2>/dev/null | cut -d= -f2)"
-DASHBOARD_PORT="${DASHBOARD_PORT:-3000}"
+DASHBOARD_PORT="${DASHBOARD_PORT:-20053}"
 if ! echo "$DASHBOARD_PORT" | grep -qE '^[0-9]+$' || [ "$DASHBOARD_PORT" -lt 1 ] || [ "$DASHBOARD_PORT" -gt 65535 ]; then
   log "ERROR: DASHBOARD_PORT ('$DASHBOARD_PORT') doesn't look like a valid port."
   exit 1

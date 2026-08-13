@@ -27,7 +27,7 @@ log() {
 }
 
 DASHBOARD_PORT="$(grep -E '^DASHBOARD_PORT=' "$PROJECT_DIR/.env" 2>/dev/null | cut -d= -f2)"
-DASHBOARD_PORT="${DASHBOARD_PORT:-3000}"
+DASHBOARD_PORT="${DASHBOARD_PORT:-20053}"
 
 is_healthy() {
   curl -fs -o /dev/null --max-time 5 "http://localhost:${DASHBOARD_PORT}/api/auth/check"

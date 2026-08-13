@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   // DASHBOARD_PORT from .env, keeping the dev proxy target in sync with
   // whatever port server.js actually listens on.
   const env = loadEnv(mode, process.cwd(), '')
-  const dashboardPort = env.DASHBOARD_PORT || 3000
+  const dashboardPort = env.DASHBOARD_PORT || 20053
 
   return {
     plugins: [react()],
