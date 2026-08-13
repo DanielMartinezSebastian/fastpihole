@@ -43,7 +43,7 @@ export default function App() {
           classNames: {
             toast: '!border !border-border !bg-card !text-foreground !shadow-lg',
             success: '!border-success/50',
-            error: '!border-destructive/50'
+            error: '!border-warning/50'
           }
         }}
       />

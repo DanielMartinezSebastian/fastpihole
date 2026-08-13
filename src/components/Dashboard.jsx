@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import Header from './Header'
 import { useSettings } from '../hooks/useSettings'
 import { useTranslation } from '../i18n/I18nContext.jsx'
+import { piHoleAdminUrl } from '../lib/utils'
 
 export default function Dashboard({ onLogout, onOpenSettings, pihole }) {
   const { status, summary, clients, systemInfo, isLoading, error, enableBlocking, disableBlocking, toggleClientBlock } = pihole
@@ -156,7 +157,17 @@ export default function Dashboard({ onLogout, onOpenSettings, pihole }) {
                 ))}
               </div>
             ) : (
-              <p className="py-6 text-sm text-center text-muted-foreground">{t('dashboard.noDevices')}</p>
+              <div className="py-6 space-y-1 text-center">
+                <p className="text-sm text-muted-foreground">{t('dashboard.noDevices')}</p>
+                <a
+                  href={piHoleAdminUrl(settings?.piHoleHost, settings?.piHolePort, '/groups/clients')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-xs text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                >
+                  {t('dashboard.noDevicesHelp')}
+                </a>
+              </div>
             )}
           </CardContent>
         </Card>

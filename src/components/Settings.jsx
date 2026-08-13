@@ -8,6 +8,7 @@ import { PasswordInput } from './ui/password-input'
 import Header from './Header'
 import { useSettings } from '../hooks/useSettings'
 import { useTranslation } from '../i18n/I18nContext.jsx'
+import { piHoleAdminUrl } from '../lib/utils'
 
 function Field({ label, children }) {
   return (
@@ -120,6 +121,14 @@ export default function Settings({ onBack, onLogout, pihole }) {
                       onBeforeReveal={handleRevealToken}
                       placeholder={settings?.hasPiHoleApiToken ? '••••••••' : t('settings.tokenPlaceholder')}
                     />
+                    <a
+                      href={piHoleAdminUrl(host, port, '/settings/api')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-xs text-center text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                    >
+                      {t('settings.tokenHelpLink')}
+                    </a>
                   </Field>
 
                   <div className="flex gap-2">
